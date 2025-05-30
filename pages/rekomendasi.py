@@ -52,6 +52,7 @@ class Recommendation:
     
         search = st.text_input("Search your song :")
         if search:
+            search = search.title()
             filtered_df = filtered_df[filtered_df['song_name'].str.contains(search, case=False, na=False)]
 
         filtered_df = filtered_df.sort_values(by='song_popularity', ascending=False)
