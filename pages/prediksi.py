@@ -48,7 +48,7 @@ class Prediction:
         acousticness,
         key_encoded,
         audio_mode,
-        song_duration,
+        song_duration_proses,
         loudness,
         audio_valence
         ]]
