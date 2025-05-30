@@ -5,7 +5,7 @@ class Recommendation:
     def render(self):
         st.title("🎧 Refrensi Lagu")
 
-        df = pd.read_csv("data/song_data.csv")
+        df = pd.read_csv("data/Song_data_cleaned.csv")
 
         st.markdown("### Filter Berdasarkan Karakteristik")
 
@@ -66,4 +66,4 @@ class Recommendation:
 
         filtered_df = filtered_df.sort_values(by='song_popularity', ascending=False)
 
-        st.dataframe(filtered_df[['song_name', 'song_popularity']].head(5))
+        st.dataframe(filtered_df.head(5))
