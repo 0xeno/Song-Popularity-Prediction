@@ -1,7 +1,7 @@
 import streamlit as st
-from pages.home import Home
-from pages.prediksi import Prediction
-from pages.rekomendasi import Recommendation
+from fitur.home import Home
+from fitur.prediksi import Prediction
+from fitur.rekomendasi import Recommendation
 from utils.style import apply_custom_styles
 
 # Apply global CSS styling
