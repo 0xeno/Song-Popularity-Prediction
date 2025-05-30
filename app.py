@@ -16,7 +16,7 @@ if selection == "Home":
     page = Home()
 elif selection == "Prediksi":
     page = Prediction()
-elif selection == "Rekomendasi":
+elif selection == "Refrensi":
     page = Recommendation()
 
 page.render()
