@@ -8,7 +8,7 @@ from utils.style import apply_custom_styles
 apply_custom_styles()
 
 # Sidebar for navigation
-st.sidebar.title("Navigasi")
+st.sidebar.title("Menu")
 selection = st.sidebar.radio("Pilih Halaman:", ["Home", "Prediksi", "Rekomendasi"])
 
 # Page routing
