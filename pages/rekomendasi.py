@@ -34,9 +34,9 @@ class Recommendation:
             elif production == "Electronic":
                 filtered_df = filtered_df[filtered_df['acousticness'] < 0.3]
             elif production == "Major Key Song":
-                filtered_df = filtered_df[filtered_df['audio_mode_encoded'] == 1]
+                filtered_df = filtered_df[filtered_df['audio_mode'] == 1]
             elif production == "Minor Key Song":
-                filtered_df = filtered_df[filtered_df['audio_mode_encoded'] == 0]
+                filtered_df = filtered_df[filtered_df['audio_mode'] == 0]
 
             # Filter volume
             if volume == "Quiet":
