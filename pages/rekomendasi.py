@@ -5,7 +5,7 @@ class Recommendation:
     def render(self):
         st.title("🎧 Refrensi Lagu")
 
-        df = pd.read_csv("song_data.csv")
+        df = pd.read_csv("data/song_data.csv")
 
         st.markdown("### Filter Berdasarkan Karakteristik")
 
