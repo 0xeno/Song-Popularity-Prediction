@@ -43,6 +43,7 @@ class Prediction:
             'B': 11
         }
         key_encoded = key_mapping[key]
+        song_duration_proses = song_duration * 60000
         features = [[
         acousticness,
         key_encoded,
