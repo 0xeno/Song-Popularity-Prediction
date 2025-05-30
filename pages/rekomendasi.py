@@ -9,17 +9,15 @@ class Recommendation:
 
         st.markdown("### Filter Berdasarkan Karakteristik")
 
-        col1, col2, col3 = st.columns(3)
+        col1, col2 = st.columns(2)
 
         with col1:
             mood = st.selectbox("Mood Lagu", ["","Happy", "Chill", "Sad"])
             production = st.selectbox("Tipe Produksi", ["","Acoustic", "Electronic", "Major Key Song", "Minor Key Song"])
 
         with col2:
-            duration = st.selectbox("Durasi Lagu", ["","Short", "Average", "Long"])
-            volume = st.selectbox("Tingkat Volume", ["","Quiet", "Normal", "Loud"])
-        with col3:
             key = st.selectbox("Nada Dasar", ["", "C", "D", "E", "F", "G", "A", "B", "F#", "Bb", "Eb"])
+            volume = st.selectbox("Tingkat Volume", ["","Quiet", "Normal", "Loud"])
         filtered_df = df.copy()
         if st.button("Filter"):
             # Filter mood
@@ -39,14 +37,6 @@ class Recommendation:
                 filtered_df = filtered_df[filtered_df['audio_mode_encoded'] == 1]
             elif production == "Minor Key Song":
                 filtered_df = filtered_df[filtered_df['audio_mode_encoded'] == 0]
-
-            # Filter durasi
-            if duration == "Short":
-                filtered_df = filtered_df[filtered_df["song_duration_min"] < 120000]
-            elif duration == "Average":
-                filtered_df = filtered_df[(filtered_df["song_duration_min"] >= 120000) & (filtered_df["song_duration_min"] <= 270000)]
-            elif duration == "Long":
-                filtered_df = filtered_df[filtered_df["song_duration_min"] > 270000]
 
             # Filter volume
             if volume == "Quiet":
