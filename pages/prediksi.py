@@ -20,10 +20,10 @@ class Prediction:
             key = st.selectbox("key",('C','D♭','D','E♭','E','F','G♭','G','A♭','A','B♭','B'))
             song_duration = st.number_input("song duration", min_value=0.0, max_value=5.0, step=0.01)
             valence = st.number_input("Audio Valence", min_value=0.0, max_value=1.0, step=0.01)
-
+        model = Prediction
         if st.button("Prediksi"):
             # Simulasi prediksi model
-            result = Prediction.prediksi(acousticness, key, audio_mode, 
+            result = model.prediksi(acousticness, key, audio_mode, 
                                          song_duration, loudness, valence)
             st.markdown(f"**Skor popularitas lagu anda adalah {result}**")
             
