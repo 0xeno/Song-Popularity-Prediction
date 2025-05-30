@@ -48,7 +48,7 @@ class Recommendation:
         
             if key:
                 key_mapping = {"C": 0, "D": 2, "E": 4, "F": 5, "G": 7, "A": 9, "B": 11, "F#": 6, "Bb": 10, "Eb": 3}
-                filtered_df = filtered_df[filtered_df['key_encoded'] == key_mapping[key]]
+                filtered_df = filtered_df[filtered_df['key'] == key_mapping[key]]
     
         search = st.text_input("Search your song :")
         if search:
