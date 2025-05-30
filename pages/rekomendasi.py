@@ -42,11 +42,11 @@ class Recommendation:
 
             # Filter durasi
             if duration == "Short":
-                filtered_df = filtered_df[filtered_df["song_duration_ms"] < 120000]
+                filtered_df = filtered_df[filtered_df["song_duration_min"] < 120000]
             elif duration == "Average":
-                filtered_df = filtered_df[(filtered_df["song_duration_ms"] >= 120000) & (filtered_df["song_duration_ms"] <= 270000)]
+                filtered_df = filtered_df[(filtered_df["song_duration_mmin"] >= 120000) & (filtered_df["song_duration_mmin"] <= 270000)]
             elif duration == "Long":
-                filtered_df = filtered_df[filtered_df["song_duration_ms"] > 270000]
+                filtered_df = filtered_df[filtered_df["song_duration_mmin"] > 270000]
 
             # Filter volume
             if volume == "Quiet":
