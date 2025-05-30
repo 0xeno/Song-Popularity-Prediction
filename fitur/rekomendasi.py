@@ -57,4 +57,4 @@ class Recommendation:
 
         filtered_df = filtered_df.sort_values(by='song_popularity', ascending=False)
 
-        st.dataframe(filtered_df.head(5))
+        st.dataframe(filtered_df.head(5).reset_index(drop=True))
