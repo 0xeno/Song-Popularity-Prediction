@@ -9,7 +9,7 @@ apply_custom_styles()
 
 # Sidebar for navigation
 st.sidebar.title("Menu")
-selection = st.sidebar.radio("Pilih Halaman:", ["Home", "Prediksi", "Rekomendasi"])
+selection = st.sidebar.radio("Pilih Halaman:", ["Home", "Prediksi", "Refrensi"])
 
 # Page routing
 if selection == "Home":
