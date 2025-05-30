@@ -51,6 +51,6 @@ class Prediction:
         song_duration,
         loudness,
         audio_valence
-    ]]
+        ]]
         preidction = self.model.predict(features)
         return preidction[0]
