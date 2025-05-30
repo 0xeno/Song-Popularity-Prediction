@@ -23,7 +23,8 @@ class Prediction:
 
         if st.button("Prediksi"):
             # Simulasi prediksi model
-            result = Prediction.prediksi(acousticness, key, audio_mode, song_duration, loudness, valence)
+            result = Prediction.prediksi(acousticness, key, audio_mode, 
+                                         song_duration, loudness, valence)
             st.markdown(f"**Skor popularitas lagu anda adalah {result}**")
             
     def prediksi(self,acousticness, key, audio_mode, song_duration, loudness, valence):
