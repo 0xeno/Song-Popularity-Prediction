@@ -13,7 +13,7 @@ class Prediction:
 
         with col1:
             acousticness = st.number_input("Acousticness", min_value=0.0, max_value=1.0, step=0.01)
-            audio_mode = st.selectbox("Audio Mode",(0,1))
+            audio_mode = st.selectbox("Audio Mode",('Minor','Major'))
             loudness = st.number_input("Loudness", min_value=-60.0, max_value=0.0, step=0.1)
 
         with col2:
@@ -28,7 +28,7 @@ class Prediction:
             st.markdown(f"**Skor popularitas lagu anda adalah {result}**")
             
     def prediksi(self,acousticness, key, audio_mode, song_duration_ms, loudness, audio_valence):
-        # key preprocessing
+        # data preprocessing
         key_mapping = {
             'C': 0,
             'D♭': 1,
@@ -45,10 +45,11 @@ class Prediction:
         }
         key_encoded = key_mapping[key]
         song_duration_proses = song_duration_ms * 60000
+        mode = 0 if audio_mode == 'Minor'else 1
         features = [[
         acousticness,
         key_encoded,
-        audio_mode,
+        mode,
         song_duration_proses,
         loudness,
         audio_valence
