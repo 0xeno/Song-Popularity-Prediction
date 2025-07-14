@@ -98,7 +98,7 @@ This project builds a machine learning pipeline to predict the **popularity scor
 │   └── rekomendasi.py
 ├── utils/
 │   └── style.py
+├── README.md
 ├── App.py
 ├── best_regression_model_20250529_131743.joblib
-├── requirements.txt
-└── README.md
+└── requirements.txt
